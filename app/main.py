@@ -25,7 +25,7 @@ def convert_text_to_csv(text):
     return csv_data.getvalue()
 
 
-@app.post("/uploadfile/")
+@app.post("/convertpdf/")
 async def create_upload_file(file: UploadFile = File(...)):
     # Check if the uploaded file is a PDF
     if file.filename.endswith(".pdf"):
